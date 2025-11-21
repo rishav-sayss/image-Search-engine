@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #39297b;
+    text-align: center;
+}
+
+main h1 {
+    padding: 2rem;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+main form {
+    width: 40%;
+    margin: 30px auto;
+    height: 60px;
+    background-color: #36368bb9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+main form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+}
+
+::placeholder {
+    font-size: 20px;
+    color: white;
+}
+
+form button {
+    width: 150px;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: orangered;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.moreimg {
+    background-color: #ff3929;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px auto 100px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.showresult {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.showresult img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+ @media (max-width: 768px) {
+    .showresult {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main form {
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    main form input {
+        width: 90%;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    form button {
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .showresult {
+        grid-template-columns: 1fr;
+    }
+}
