@@ -1,4 +1,4 @@
- let UNSPLASH_KEY = "MfjX02hGSbUjetebdd6raAbRxt1_m5w59vtcjabyVtI";
+let UNSPLASHKEY = "MfjX02hGSbUjetebdd6raAbRxt1_m5w59vtcjabyVtI";
 let input = document.querySelector("#input");
 let form = document.querySelector("#form");
 let showresult = document.querySelector(".showresult");
@@ -7,7 +7,7 @@ let keyword = "";
 let page = 1;
 async function searchimg() {
     keyword = input.value;
-    let url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${UNSPLASH_KEY}&per_page=12`;
+    let url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${UNSPLASHKEY}&per_page=12`;
     let response = await fetch(url);
     let data = await response.json();
     let result = data.results.slice(0,9);
